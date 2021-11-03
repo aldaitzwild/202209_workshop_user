@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 // Get the required route (without query string) and remove trailing slashes
 $route = trim($_SERVER['PATH_INFO'] ?? '', '/');
 

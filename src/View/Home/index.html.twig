@@ -1,5 +1,18 @@
-{% extends 'layout.html.twig' %}
+{% extends 'Layout/column.html.twig' %}
 
+{% block title %}Simple MVC | Workshop WCS{% endblock %}
 {% block content %}
-    <h1>Hello Wilder !</h1>
+    <div class="text-center bg-light p-5">
+        <h1>Workshop Simple MVC</h1>
+        <p>Connect a user from database into PHP session</p>
+        {% if user.isconnected %}
+            <p>
+                You are connected as <strong>{{ user.pseudo }}</strong> !
+            </p>
+            <a href="/user-account">Visit your account</a>.
+        {% else %}
+            <a href="/login">Go to login page</a>
+            or <a href="/register">register an account</a>.
+        {% endif %}
+    </div>
 {% endblock %}
