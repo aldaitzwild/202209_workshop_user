@@ -10,14 +10,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/"><i class="bi bi-house-door-fill"></i> Home</a>
                 </li>
-                {% if user.isConnected %}
+                {% if user %}
                     <li class="nav-item dropdown ms-auto">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i> {{ user.pseudo }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/user-account">My account</a></li>
+                            <li><a class="dropdown-item" href="/items">My items</a></li>
                             <li><a class="dropdown-item" href="/logout"><i class="bi bi-box-arrow-right"></i> Disconnect</a>
                             </li>
                         </ul>

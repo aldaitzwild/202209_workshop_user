@@ -4,7 +4,7 @@ namespace App\Controller;
 
 class UserController extends AbstractController
 {
-    public function login()
+    public function login(): string
     {
         return $this->twig->render('User/login.html.twig');
     }
@@ -13,13 +13,8 @@ class UserController extends AbstractController
     {
     }
 
-    public function register()
+    public function register(): string
     {
         return $this->twig->render('User/register.html.twig');
-    }
-
-    public function userAccount()
-    {
-        return $this->twig->render('User/user-account.html.twig');
     }
 }
